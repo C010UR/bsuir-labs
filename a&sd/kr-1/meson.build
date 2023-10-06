@@ -1,4 +1,4 @@
-project('Lab 5', 'cpp',
+project('KR 1', 'cpp',
   version : '1',
   default_options : [
     'warning_level=3',
@@ -15,8 +15,15 @@ exe_bst = executable('bst',
   install_dir : './bin',
 )
 
-exe_tbsts = executable('tbst',
+exe_tbst = executable('tbst',
   sources : ['src/main_threaded_bst.cpp'],
+  include_directories : incdir,
+  install : true,
+  install_dir : './bin',
+)
+
+exe_avlbst = executable('avlbst',
+  sources : ['src/main_avl_bst.cpp'],
   include_directories : incdir,
   install : true,
   install_dir : './bin',
